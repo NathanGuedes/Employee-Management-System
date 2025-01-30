@@ -17,8 +17,8 @@ public class Worker {
     private String email;
     private LocalDate birthDate;
 
-    List<Contract> contractList = new ArrayList<>();
-    List<Benefit> benefitList = new ArrayList<>();
+    private List<Contract> contractList = new ArrayList<>();
+    private List<Benefit> benefitList = new ArrayList<>();
 
     public Worker(){
     }
@@ -81,7 +81,9 @@ public class Worker {
     }
 
     public void addContract(Contract contract) {
-        contractList.add(contract);
+        if (contract != null) {
+            contractList.add(contract);
+        }
     }
 
     public void removeContract(Contract contract) {
@@ -89,12 +91,15 @@ public class Worker {
     }
 
     public void addBenefit(Benefit benefit) {
-        benefitList.add(benefit);
+        if (benefit != null) {
+            benefitList.add(benefit);
+        }
     }
 
     public void removeBenefit(Benefit benefit) {
         benefitList.remove(benefit);
     }
+
 
     public double calculateTotalSalary() {
         double totalSum = baseSalary;
