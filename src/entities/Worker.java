@@ -130,7 +130,6 @@ public class Worker {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        double totalSum = 0;
 
         // Cabeçalho
         sb.append("===== Employee Summary =====").append("\n\n")

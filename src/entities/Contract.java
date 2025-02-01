@@ -7,7 +7,7 @@ public class Contract {
     private Double hourlyRate;
     private Integer hours;
 
-    public Contract(){
+    public Contract() {
     }
 
     public Contract(LocalDate date, Double hourlyRate, Integer hours) {
